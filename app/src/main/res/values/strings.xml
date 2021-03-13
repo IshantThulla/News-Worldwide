@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">InternationalNews</string>
+    <string-array name="countries">
+
+        <item value="USA">us</item>
+        <item value="India">in</item>
+        <item value="Australia">au</item>
+        <item value="China">cn</item>
+        <item> ae</item>
+        <item> ca</item>
+        <item> sa</item>
+        <item> ru</item>
+        <item> nz</item>
+
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

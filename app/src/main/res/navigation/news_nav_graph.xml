@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/news_nav_graph"
+    app:startDestination="@id/firstScreenFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.androiddevs.internationalnews.fragments.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_articlePreviewFragment"
+            app:destination="@id/articlePreviewFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/topHeadlinesFragment"
+        android:name="com.androiddevs.internationalnews.fragments.TopHeadlinesFragment"
+        android:label="TopHeadlinesFragment" >
+        <action
+            android:id="@+id/action_topHeadlinesFragment_to_articlePreviewFragment"
+            app:destination="@id/articlePreviewFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/storeNewsFragment"
+        android:name="com.androiddevs.internationalnews.fragments.StoreNewsFragment"
+        android:label="StoreNewsFragment" >
+        <action
+            android:id="@+id/action_storeNewsFragment_to_articlePreviewFragment"
+            app:destination="@id/articlePreviewFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/articlePreviewFragment"
+        android:name="com.androiddevs.internationalnews.fragments.ArticlePreviewFragment"
+        android:label="ArticlePreviewFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.androiddevs.internationalnews.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstScreenFragment"
+        android:name="com.androiddevs.internationalnews.fragments.FirstScreenFragment"
+        android:label="FirstScreenFragment" >
+        <action
+            android:id="@+id/action_firstScreenFragment_to_storeNewsFragment"
+            app:destination="@id/storeNewsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_firstScreenFragment_to_topHeadlinesFragment"
+            app:destination="@id/topHeadlinesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_firstScreenFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+</navigation>
